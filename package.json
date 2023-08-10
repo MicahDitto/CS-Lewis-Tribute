@@ -1,0 +1,22 @@
+{
+  "name": "tribute-page",
+  "version": "1.0.0",
+  "description": "Tribute page to the life of C.S. Lewis",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MicahDitto/CS-Lewis-Tribute.git"
+  },
+  "author": "Micah Dittmar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MicahDitto/CS-Lewis-Tribute/issues"
+  },
+  "homepage": "https://github.com/MicahDitto/CS-Lewis-Tribute#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.1"
+  }
+}
