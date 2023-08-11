@@ -5,7 +5,7 @@ body {
 h1 {
   font-family: "Courier New Bold", Courier, monospace;
   padding: 2rem;
-  margin: 1rem;
+  margin: 10rem 1rem 1rem 1rem;
   position: relative;
   /* left: 50%; */
   /* transform: translate(-50%, -50%); */
@@ -13,7 +13,7 @@ h1 {
 h3,
 h2 {
   padding: 0.5rem;
-  margin: 1rem;
+  margin: 4rem 1rem 1rem 1rem;
 }
 p {
   padding: 1rem;
@@ -35,6 +35,72 @@ li {
   font-size: 1.1em !important;
 }
 
+.jumbotron {
+  background-color: #f8f9fa; /* Background color */
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.jumbotron h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.jumbotron li {
+  font-size: 1.25rem;
+}
+.intro-p {
+  margin: 0rem 8rem 3rem 8rem;
+}
+p strong:hover,
+p b:hover {
+  display: inline-block; /* Ensures inline elements can be transformed */
+  transform: scale(1.2); /* Adjust the scale factor as needed */
+  transition: transform 0.3s ease;
+  color: orange;
+  background: #000;
+  padding: 0px 7px 0px 7px;
+  border-radius: 10px;
+}
+
+.image-scroller {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  height: 150px; /* Adjust the height as needed */
+  scroll-behavior: smooth; /* Enable smooth scrolling behavior */
+  cursor: grab;
+  user-select: none;
+  margin: 0px 0px 150px 0px;
+}
+.image-scroller img:hover {
+  display: inline-block; /* Ensures inline elements can be transformed */
+  transform: scale(1.2); /* Adjust the scale factor as needed */
+  transition: transform 0.3s ease;
+}
+
+.image-scroller::-webkit-scrollbar {
+  display: none; /* Hide the scroll bar */
+}
+
+.image-scroller img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-right: 10px; /* Add spacing between images */
+}
+
+/* Styles for the active grab state */
+.image-scroller:active {
+  cursor: grabbing;
+}
+section {
+  margin: 0rem 6rem 0rem 6rem;
+}
+
 .container {
   display: flex;
   justify-content: center; /* Center horizontally */
@@ -53,12 +119,29 @@ li {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.center-y {
+    transform: translate(-5px, 8px);
+  }
+  .down {
+    transform: translate(0px, 30px);
+  }
+
 .ball {
   background: burlywood;
   width: 10px;
   height: 10px;
   border-radius: 5px;
 }
+.ball-clear {
+  /* position: absolute; */
+  top: 4rem;
+  background: FFFFFF;
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  /* transform: translate(0px, 30px); */
+}
+
 .right {
   padding: 5px;
 }
@@ -66,6 +149,22 @@ li {
   padding: 5px;
   border-right: solid #deb887 4px;
   /* border-left: 5px darkgray; */
+}
+.timeline-section .row {
+  /* margin: 0rem 6rem 0rem 6rem !important; */
+}
+.portrait {
+  width: 158px;
+  height: 229px;
+  margin: auto 0rem auto 0rem;
+}
+.landscape {
+  width: 300px;
+  height: 158px;
+}
+.timeline-section img {
+  margin: 1rem;
+  border-radius: 10px;
 }
 
 .bookshelf {
@@ -168,9 +267,11 @@ li {
 figure {
   position: relative;
   width: 100%;
-  height: 60%;
+  height: 60vh; /* Use viewport height (vh) instead of a fixed percentage */
   margin: 0 !important;
+  overflow: hidden; /* Add overflow to prevent content from overflowing */
 }
+
 .fixed-wrap {
   clip: rect(0, auto, auto, 0);
   position: absolute;
@@ -178,7 +279,9 @@ figure {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden; /* Add overflow to prevent content from overflowing */
 }
+
 #collection {
   background-image: url("https://i0.wp.com/www.raptisrarebooks.com/images/154943/the-chronicles-of-narnia-set-the-lion-the-witch-c-s-lewis-narnia-first-edition-rare.jpg?fit=1000%2C800&ssl=1");
   position: fixed;
@@ -192,4 +295,24 @@ figure {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   will-change: transform;
+}
+
+#title-pic {
+  background-image: url("https://addicted2success.com/wp-content/uploads/2017/08/CS-Lewis-Quotes.jpg");
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+#nav-icon {
+  border-radius: 50px;
+  width: 4%;
+  height: 4%;
 }
